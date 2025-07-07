@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 function useAnalyzer() {
-  const [terms, setTerms] = useState('');
-  const [analysis, setAnalysis] = useState('');
+const [terms, setTerms] = useState('');
+const [analysis, setAnalysis] = useState('');
 
-  const analyzeTerms = () => {
+const analyzeTerms = () => {
     const mockResponse = `
     🔍 Here's what we found:
     - You might be giving up your data to third parties.
@@ -14,9 +14,9 @@ function useAnalyzer() {
     (Okay, maybe not *explode*, but you get the idea.)
     `;
     setAnalysis(mockResponse);
-  };
+};
 
-  return { terms, setTerms, analysis, analyzeTerms };
+return { terms, setTerms, analysis, analyzeTerms };
 }
 
 export default useAnalyzer;
